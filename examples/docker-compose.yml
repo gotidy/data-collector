@@ -1,0 +1,13 @@
+version: '3'
+
+networks:
+  quantiles:
+
+services:
+  redis:
+    networks:
+      - quantiles
+    image: "redis:alpine"
+    command: [sh, -c, "rm -f /data/dump.rdb && redis-server --save ''"]  # disable persistence
+    ports:
+      - "6379:6379"

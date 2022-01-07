@@ -1,2 +1,2 @@
-# data-collector
+# Reaper
 Collect data from multiple instances
